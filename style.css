@@ -227,6 +227,13 @@ a.footnote {
   text-decoration: underline;
 }
 
+.link:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+  text-decoration-color: #cce6ff;;
+}
+
 .small_link_side {
   color: black;
   background-color: transparent;

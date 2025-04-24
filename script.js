@@ -89,3 +89,75 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+document.addEventListener('click', e => {
+  const t = e.target;
+  if (t.matches('.clickable[data-target]')) {
+    const targetSelector = t.getAttribute('data-target');
+    const targetEl = document.querySelector(targetSelector);
+    if (!targetEl) return;
+
+    const parentContainer = t.closest('.branch-children') || document.getElementById('root');
+
+    // Hide all shown elements
+    parentContainer.querySelectorAll('.branch-children.fade.showing').forEach(el => {
+      el.classList.remove('showing', 'visible');
+      el.offsetHeight;
+      el.style.display = 'none';
+    });
+
+    parentContainer.querySelectorAll('.clickable.active').forEach(el => {
+      el.classList.remove('active');
+    });
+
+    targetEl.style.display = 'block';
+    targetEl.classList.add('showing');
+    requestAnimationFrame(() => {
+      targetEl.classList.add('visible');
+    });
+
+    t.classList.add('active');
+    updateHash();
+  }
+});
+
+
+function updateHash() {
+  const activeIds = Array.from(document.querySelectorAll('.clickable.active')).map(el => el.id);
+  window.location.hash = activeIds.join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash.length > 1) {
+    const ids = window.location.hash.substring(1).split('');
+    ids.forEach(id => {
+      const trigger = document.getElementById(id);
+      if (trigger && trigger.matches('.clickable[data-target]')) {
+        const targetSelector = trigger.getAttribute('data-target');
+        const targetEl = document.querySelector(targetSelector);
+        if (!targetEl) return;
+
+        const parentContainer = trigger.closest('.branch-children') || document.getElementById('root');
+
+        // Remove any old visible/showing states
+        parentContainer.querySelectorAll('.branch-children.fade.showing, .branch-children.fade.visible').forEach(el => {
+          el.classList.remove('showing', 'visible');
+          el.style.display = 'none';
+        });
+
+        parentContainer.querySelectorAll('.clickable.active').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Start the fade-in flow
+        targetEl.style.display = 'block';
+        targetEl.classList.add('showing');
+        requestAnimationFrame(() => {
+          targetEl.classList.add('visible');
+        });
+
+        trigger.classList.add('active');
+      }
+    });
+  }
+});

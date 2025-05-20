@@ -46,6 +46,17 @@ function onMouseHoverOut() {
   })
 }
 
+ mermaid.initialize({
+  startOnLoad: true,
+  theme: "base",
+  themeVariables: {
+    primaryColor: "#cce6ff",
+    edgeLabelBackground: "#004d99",
+    fontFamily: "Open Sans",
+    fontSize: "18px",
+  }
+}) 
+
 
 function footnote1() {
   var popup = document.getElementById("foot1");

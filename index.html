@@ -2,7 +2,8 @@
 <html>
 <head>
 <title>Tapestry Takes</title>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="thumbs_up_.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,75 +55,184 @@
   <div class="column middle">
   <div class='edge'>
 
+<span id="branch-X" class="branch-children fade">
+<p> <a class="clickable" id="A" data-target="#branch-XY"></a> </p>
+<p> <a class="clickable" id="B" data-target="#branch-XX"></a></p>
+<br>
+</span>
+
+<div class='mermaid' style='display: none; width: 100%; height: 800px; overflow: auto;'>
+flowchart LR
+
+X[The Tapestry]-->A[Threads]
+X[The Tapestry]-->B[Tapestry]
+A-->AA[Loose threads]
+AA-->AAA[Single Person]
+AAA-->AAAA[Adjacent Ideas]
+AAAA-->AAAAA[Knowledge]
+AAAA-->AAAAB[Understanding]
+AAAAB-->AAAABA[Memory]
+AAAAB-->AAAABB[Notes]
+AAA-->AAAB[Personal Inexpressibility]
+AAAB-->AAABA[Already Exists]
+AAAB-->AAABB[Wonder]
+AA-->AAB[Humanity]
+AAB-->AABA[Innovation]
+AABA-->AABAA[Insight]
+AABAA-->AABAAA[Specialisation]
+AABAA-->AABAAB[Generalisation]
+AAB-->AABB[Universal Inexpressibility]
+AABB-->AABBA[Naturally Formed]
+AABB-->AABBB[Purposefully Coined]
+A-->AB[Re-expressing threads]
+AB-->ABA[Riffs]
+ABA-->ABAA[Resonance]
+ABA-->ABAB[Quality]
+AB-->ABB[Weaving]
+ABB-->ABBA[Narrative]
+ABB-->ABAB
+B-->BA[Lenses]
+BA-->BAA[Worldview]
+BA-->BAB[Cognitive Frame of Mind]
+BAB-->BABA[Magnifying Glass]
+BABA-->BABAA[Microscope]
+BABA-->BABAB[Telescope]
+BAB-->BABB[Kaleidoscope]
+BABB-->BABBA[Shared Underlying Principles]
+BAA-->BAAA[Worldview]
+BAA-->BAAB[Cognitive Frame of Mind]
+B-->BB[Language]
+BB-->BBA[Words]
+BBA-->BBAA[Written]
+BBAA-->BBAAA[Text]
+BBAA-->BBAAB[Hypertext]
+BBA-->BBAB[Spoken]
+BB-->BBB[Meaning]
+BBB-->BBBA[Semantics]
+BBB-->BBBB[Pragmatics]
+</div>
+
 <br><br><br><br><br><br><br>
 <h1 style='text-align: left;'>The Tapestry</h1>
 <span id="root">
-<p>
-Ideas are the 
-<a class="clickable" id="A" data-target="#branch-A">threads</a> 
-which make up the 
-<a class="clickable" id="B" data-target="#branch-B">tapestry</a> 
-of everything.
+<p>Ideas are the <a class="clickable" id="A" data-target="#branch-A">threads</a> which make up the <a class="clickable" id="B" data-target="#branch-B">tapestry</a> of everything.
 <br><br>
 </p>
+	<span id="branch-A" class="branch-children fade">
+	<p>To be curious is to pull on <a class="clickable" id="A" data-target="#branch-AA">loose threads</a>.</p>
+	<p>To be creative is to take these threads and <a class="clickable" id="B" data-target="#branch-AB">express them</a> in new ways.</p>
+	<br>
+		<span id="branch-AA" class="branch-children fade">
+		<p>Loose threads imply that the tapestry is on some level incomplete, that not every idea fits together perfectly.</p>
+		<p>This may be in the mind of an <a class="clickable" id="A" data-target="#branch-AAA">individual</a>, or in the collective knowledge of <a class="clickable" id="B" data-target="#branch-AAB">humanity</a> as a whole.</p>
+		<br>
 
-<span id="branch-A" class="branch-children fade">
-<p>To be curious is to pull on <a class="clickable" id="A" data-target="#branch-AA">loose threads</a>.</p>
-<p>To be creative is to take these threads and <a class="clickable" id="B" data-target="#branch-AB">re-express them</a>.</p>
-<br>
+			<span id="branch-AAA" class="branch-children fade">
+			<p>On the scale of the individual, to pull on loose threads is to explore how unfamiliar ideas fit into <a class="clickable" id="A" data-target="#branch-AAAA">adjacent ideas</a> around it.</p>
+			<p>Until this exploration is complete, this unfamiliarity will inevitably generate <a class="clickable" id="B" data-target="#branch-AAAB">personal inexpressibility</a>.</p>
+			<br>
 
-<span id="branch-AA" class="branch-children fade">
-<p>Loose threads imply that the tapestry is on some level incomplete, that not every idea fits together perfectly.</p>
-<p>This may be in the mind of an <a class="clickable" id="A" data-target="#branch-AAA">individual</a>, or in the collective knowledge of <a class="clickable" id="B" data-target="#branch-AAB">humanity</a> as a whole.</p>
-<br>
-</span>
+				<span id="branch-AAAA" class="branch-children fade">
+				<p>Though it's in the nature of the tapestry for all ideas to be interconnected, some threads are more closely intertwined than others.</p>
+				<p>Adjacent ideas share a direct connection.</p>
+				<p>Rather than trying to grasp an unfamiliar idea without any source of reference, finding a familiar adjacent idea makes the unfamiliar idea far easier to grasp.</p>
+				<p><a class="clickable" id="A" data-target="#branch-AAAAA">Knowledge</a> is the comprehension of a single, stand-alone idea.</p>
+				<p><a class="clickable" id="B" data-target="#branch-AAAAB">Understanding</a> is the comprehension of how an idea fits into the context of adjacent ideas around it.</p>
+				<br>
 
-<span id="branch-AB" class="branch-children fade">
-<p>This expression can encompass a single thread being <a class="clickable" id="A" data-target="#branch-ABA">riffed</a> upon, or multiple threads being <a class="clickable" id="B" data-target="#branch-ABB">weaved</a> together.</p>
-<br>
-</span>
-</span>
+					<span id="branch-AAAAA" class="branch-children fade">
+					<p> <a class="clickable" id="A" data-target="#branch-AAAAAA">adjacent ideas</a> </p>
+					<p>U <a class="clickable" id="B" data-target="#branch-AAAAAB">persony</a>.</p>
+					<br>
+					</span>
 
-<span id="branch-B" class="branch-children fade">
-<p>How we perceive the tapestry is shaped by <a class="clickable" id="A" data-target="#branch-BA">lenses</a>.</p>
-<p>How we express the tapestry is shaped by <a class="clickable" id="B" data-target="#branch-BB">language</a>.</p>
-<br>
+					<span id="branch-AAAAB" class="branch-children fade">
+					<p>The greater the number of adjacent ideas you are familiar with, the greater your overall understanding of an idea.</p>
+					<p>However, this understanding is not completely infallible.</p>
+					<p><a class="clickable" id="A" data-target="#branch-AAAABA">Memory</a> is precarious.</p>
+					<p>After a while, as we ingest more ideas, our understanding threatens to contract rather than expand.</p>
+					<p>To resolve this, we must extend our memory beyond our mind.</p>
+					<p>This is the purpose of <a class="clickable" id="B" data-target="#branch-AAAABB">notes</a>.</p>
+					<br>
+					</span>
+				</span>
+		    </span>
 
-<span id="branch-BA" class="branch-children fade">
-<p>Lenses represent a person's fundamental perspective of how they see the world.</p>
-<p>They can range from all encompassing <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
-<br>
-<span id="branch-BAA" class="branch-children fade">
-<p>replace.</p>
-<p>Treplace <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to a highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
-<br>
-</span>
+			<span id="branch-AAB" class="branch-children fade">
+			<p>On the scale of humanity, to pull on loose threads is to cultivate <a class="clickable" id="A" data-target="#branch-AABA">discovery</a>.</p>
+			<p>However, before such discoveries are fully explored, they will inevitably be shrouded by <a class="clickable" id="B" data-target="#branch-AABB">universal inexpressibility</a>.</p>
+			<br>
+				<span id="branch-AABB" class="branch-children fade">
+				<p>Inexpressibility is a semantic gap between an idea and the words to capture that idea.</p>
+				<p>To find those words, and to resolve inexpressibility, you must turn to language.</p>
+				<p>In the case of universal inexpressibility, the word will either be <a class="clickable" id="A" data-target="#branch-AABBA">naturally produced</a> 
+				through the cultural innovations of aligned communities, or it will be <a class="clickable" id="B" data-target="#branch-AABBB">purposefully coined</a> through the documented assignment of an individual.</p>
+				<br>
+					<span id="branch-AABBA" class="branch-children fade">
+					<p>Language as lore <a class="clickable" id="A" data-target="#branch-XY">adjacent ideas</a> </p>
+					<p>U <a class="clickable" id="B" data-target="#branch-XX">persony</a>.</p>
+					<br>
+					</span>
+					<span id="branch-AABBB" class="branch-children fade">
+					<p>Language as insight <a class="clickable" id="A" data-target="#branch-XY">adjacent ideas</a> </p>
+					<p>U <a class="clickable" id="B" data-target="#branch-XX">persony</a>.</p>
+					<br>
+					</span>
+				</span>
+			</span>
+		</span>
 
-<span id="branch-BAB" class="branch-children fade">
-<p>replace.</p>
-<p>replace <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to a highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
-<br>
-</span>
-</span>
+		<span id="branch-AB" class="branch-children fade">
+		<p>This expression can encompass a single thread being <a class="clickable" id="A" data-target="#branch-ABA">riffed</a> upon, or multiple threads being <a class="clickable" id="B" data-target="#branch-ABB">weaved</a> together.</p>
+		<p>Either way, all expression has some leve of <a class="clickable" id="C" data-target="#branch-ABC">quality</a>.</p>
+		<br>
+		</span>
+	</span>
 
-<span id="branch-BB" class="branch-children fade">
-<p>Language encompasses words with meaning.</p>
-<p ><a class="clickable" id="A" data-target="#branch-BBA">Words</a> communicate ideas. <a class="clickable" id="B" data-target="#branch-BBB">Meaning</a> is the bridge between them.</p>
-<br>
+	<span id="branch-B" class="branch-children fade">
+	<p>How we perceive the tapestry is shaped by <a class="clickable" id="A" data-target="#branch-BA">lenses</a>.</p>
+	<p>How we express the tapestry is shaped by <a class="clickable" id="B" data-target="#branch-BB">language</a>.</p>
+	<br>
 
-<span id="branch-BBA" class="branch-children fade">
-<p>The most coherent form of an idea is in the <a class="clickable" id="A" data-target="#branch-BBAA">written word</a>.</p>
-<p>The most dymanic form of an idea is in the <a class="clickable" id="B" data-target="#branch-BBAB">spoken word</a>.</p>
-<br>
-</span>
+		<span id="branch-BA" class="branch-children fade">
+		<p>Lenses represent a person's fundamental perspective of how they see the world.</p>
+		<p>They can range from all encompassing <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
+		<br>
+			<span id="branch-BAA" class="branch-children fade">
+			<p>Th.</p>
+			<p>Treplace <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to a highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
+			<br>
+			</span>
 
-<span id="branch-BBB" class="branch-children fade">
-<p>The meaning of a word can contain far more than a definition. Enter <a class="clickable" id="A" data-target="#branch-BBBA">semantics</a>.</p>
-<p>Additionally, this same meaning can differ contextually. Enter <a class="clickable" id="A" data-target="#branch-BBBB">pragmatics</a>.</p>
-<br>
-</span>
-</span>
-</span>
+			<span id="branch-BAB" class="branch-children fade">
+			<p>replace.</p>
+			<p>replace <a class="clickable" id="A" data-target="#branch-BAA">worldviews</a> to a highly focused <a class="clickable" id="B" data-target="#branch-BAB">cognitive frames of mind</a>.</p>
+			<br>
+			</span>
+		</span>
+
+		<span id="branch-BB" class="branch-children fade">
+		<p>Language encompasses words with meaning.</p>
+		<p><a class="clickable" id="A" data-target="#branch-BBA">Words</a> communicate ideas. <a class="clickable" id="B" data-target="#branch-BBB">Meaning</a> is the bridge between them.</p>
+		<br>
+			<span id="branch-BBA" class="branch-children fade">
+			<p>The most coherent form of an idea is in the <a class="clickable" id="A" data-target="#branch-BBAA">written word</a>.</p>
+			<p>The most dymanic form of an idea is in the <a class="clickable" id="B" data-target="#branch-BBAB">spoken word</a>.</p>
+			<br>
+				<span id="branch-BBAAA" class="branch-children fade">
+				<p>Words captured in text are a documentation of ideas <a class="clickable" id="A" data-target="#branch-XY"></a> </p>
+				<p>Words captured in <a class="clickable" id="B" data-target="#branch-BBAAAB">hypertext</a> act as connective links between ideas.</p>
+				<br>
+				</span>
+			</span>
+
+			<span id="branch-BBB" class="branch-children fade">
+			<p>The meaning of a word can contain far more than a definition. Enter <a class="clickable" id="A" data-target="#branch-BBBA">semantics</a>.</p>
+			<p>Additionally, this same meaning can differ contextually. Enter <a class="clickable" id="A" data-target="#branch-BBBB">pragmatics</a>.</p>
+			<br>
+			</span>
+		</span>
+	</span>
 </span>
 
 
